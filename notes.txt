@@ -1,0 +1,43 @@
+DESCRIPTION: Django Learning Project
+
+TASK: 1 How to install Django
+in the terminal run 
+$ pip install django 
+
+after installing run 
+$ python -m django --version // to check that django is instlled 
+
+To view django commands run 
+$ django-admin 
+
+to create a new project type
+$ django-admin startproject <project name>
+
+In the folder created a file should exist called manager.py
+To Ensure that the process ran successfully run
+$ python manager.py runserver <port number | Optional, default is 8000>
+
+then open http://localhost:8000 <or port number> to view the running server
+open http://localhost:8000/admin to view the admin login page
+
+TASK: 2 How to create Django Admin user
+in the terminal 
+$ python manage.py makemigrations // Detects changes in but does not commit changes to databases 
+$ python manage.py migrate // runs through makemigrations
+$ python manage.py createsuperuser // Create super user for admin
+
+TASK: 3 How to update database
+create Models Classes in app/models.py
+$python manage.py makemigrations // view updates to make
+$python manage.py sqlmigrate <appname> 0001 <number on code file> // View SQL statement of migration to be made
+remember to resgister new models in FILE: model.py by importing class and registering in app FILE: admin.py
+
+TASK: 4 RUn the django python object shell 
+$ python manage.py shell 
+
+
+TASK: 5 Creating the forms 
+install crispy forms 
+$ pip install django-crispy-forms
+$ pip install Pillow   // NOTE: for gandling images in databases
+
