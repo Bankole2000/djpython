@@ -82,3 +82,9 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+/* NOTE: CUSTOM CSS for image upload/update fields */
+.custom-file a {
+  display: block;
+  margin-top: -56px;
+  margin-left: 60px; 
+}
