@@ -41,3 +41,14 @@ install crispy forms
 $ pip install django-crispy-forms
 $ pip install Pillow   // NOTE: for gandling images in databases
 
+
+
+Install packages for use with AWS
+$ pip install boto3
+$ pip install django-storages
+
+
+NOTE: 
+AWS_STORAGE_BUCKET_NAME='banky-blog-files'
+AWS_SECRET_ACCESS_KEY="zK8fCecRtN5c41YQpcns0n7h4T8tB7Er3lw+ALdk"
+AWS_ACCESS_KEY_ID="AKIAWXY3OUNRXFULLJHF"

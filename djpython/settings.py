@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -116,16 +117,53 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+AWS_S ="zK8fCecRtN5c41YQpcns0n7h4T8tB7Er3lw+ALdk"
+AWS_SO =""
+AWS_K ="AKIAWXY3OUNRXFULLJHF"
+AWS_KO = ""
+AWS_BN ="banky-blog-files"
+MAIL_P ="1.41421356237"
+EMAIL_U = "techybanky@gmail.com"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+
+
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True 
+EMAIL_HOST_USER = EMAIL_U
+EMAIL_HOST_PASSWORD = MAIL_P
+
+# AWS_STORAGE_BUCKET_NAME=AWS_BN
+# AWS_SECRET_ACCESS_KEY=AWS_S
+# AWS_ACCESS_KEY_ID=AWS_K
+# AWS_S3_HOST = 's3.us-east-2.amazonaws.com'
+# AWS_S3_REGION_NAME = 'us-east-2' #change to your region
+# # AWS_S3_SIGNATURE_VERSION = 's3v4'
+# AWS_QUERYSTRING_AUTH = False
+# AWS_S3_FILE_OVERWRITE = False 
+# AWS_DEFAULT_ACL = None 
+
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = AWS_K
+AWS_SECRET_ACCESS_KEY = AWS_S
+AWS_STORAGE_BUCKET_NAME = AWS_BN
+AWS_QUERYSTRING_AUTH = False
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+AWS_S3_REGION_NAME = 'us-east-2'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
