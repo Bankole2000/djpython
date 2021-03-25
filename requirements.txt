@@ -33,7 +33,7 @@ python-dateutil==2.8.0
 pytz==2019.3
 pywin32-ctypes==0.2.0
 pyxdg==0.26
-PyYAML==5.1.2
+PyYAML==5.4
 s3transfer==0.2.1
 six==1.13.0
 sqlparse==0.3.0
